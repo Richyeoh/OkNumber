@@ -35,12 +35,15 @@
 
 `Integer mask:` 0x03FF
 
+U can find this an example
+in [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=f7bf8ffd05106857d27b12ee5304594b)
+
 ## Encode example:
 
 ```rust
 fn main() {
     let mut value = -36.5_f32;
-    
+
     let mut result = 0_i32;
     if value < 0f32 {
         result |= ((1 << 15) & MASK_SIGN);
@@ -64,7 +67,7 @@ fn main() {
 ```rust
 fn main() {
     let result = 1001010000100100;
-    
+
     let signed = (result & MASK_SIGN) == MASK_SIGN;
     let integer = (result & MASK_INTEGER) as f32;
     let decimal = ((result & MASK_DECIMAL) >> 10) as f32 / pow10f(1);
@@ -75,7 +78,7 @@ fn main() {
     } else {
         value
     };
-    
+
     println!("Result: {:?}", value);
 }
 
