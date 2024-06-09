@@ -36,7 +36,7 @@ fn main() {
     let integer_part = value as i32;
     println!("Integer: {:?}", integer_part);
 
-    let decimal_part = ((value - integer_part as f32) * pow10f(1).round()) as i32;
+    let decimal_part = ((value * pow10f(1)) - (integer_part as f32) * pow10f(1)) as i32;
     println!("Decimal: {:?}", decimal_part);
 
     result |= (integer_part & MASK_INTEGER);
