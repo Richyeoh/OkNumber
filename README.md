@@ -36,7 +36,7 @@
 `Integer mask:` 0x03FF
 
 U can find this an example
-in [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=f7bf8ffd05106857d27b12ee5304594b)
+in [Rust Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=8c26c9551d0a122173a14dbc634507e0)
 
 ## Encode example:
 
